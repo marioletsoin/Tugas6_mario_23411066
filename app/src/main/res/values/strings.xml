@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">UTS</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_forgotpw">ForgotpwActivity</string>
+
+    <!--  activity_main  -->
+    <string name="mtwelcome">Welcome</string>
+    <string name="mbcacc">Create Account</string>
+    <string name="mbsignin">Sign In</string>
+    <!--  activity_main selesai  -->
+
+    <!--  activity_login  -->
+    <string name="ltwelcome">Welcome</string>
+    <string name="lhemail">Email</string>
+    <string name="lhpw">Password</string>
+    <string name="ltfpw">Forgot Password?</string>
+    <string name="lbsignin">Sign In</string>
+    <string name="ltdont">Don\'t have an account? SIGN UP</string>
+
+    <!--  activity_login selesai  -->
+
+    <!--  activity_register  -->
+    <string name="rtcacc">Create Account</string>
+    <string name="rhname">Name</string>
+    <string name="rhemail">Email</string>
+    <string name="rhpass">Password</string>
+    <string name="rhcpass">Confirm Password</string>
+    <string name="rhtext">Create Account</string>
+    <string name="rbsignup">Sign Up</string>
+    <string name="rthave">Already have an account? SIGN IN</string>
+    <!--  activity_register selesai  -->
+
+    <!--  activity_forgotpw  -->
+    <string name="ftforgot">Forgot Password?</string>
+    <string name="ftket">Enter your email to get a reset link.</string>
+    <string name="fhemail">Enter your email</string>
+    <string name="fbresetpw">Reset password</string>
+    <string name="gembok">gembok</string>
+    <string name="back">back</string>
+    <!-- activity_forgotpw selesai -->
+
+    <!--  activity_menu  -->
+    <string name="mehmail">Email</string>
+    <string name="mehsubject">Subject</string>
+    <string name="mehmessage">Message</string>
+    <string name="mebsend">Send Email</string>
+    <string name="mebrcview">Recycler View</string>
+    <string name="tVsendemailmenu">Send an Email</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_rcview">RcviewActivity</string>
+    <string name="title_activity_item_data">ItemData</string>
+    <string name="title_activity_my_adapter">MyAdapter</string>
+    <!--  activity_menu selesai  -->
+
+    <!--  activity_rcview  -->
+    <string name="tVteksrcview">List of Football Players</string>
+    <!--  activity_rcview selesai  -->
+
+    <!--  activity_pilihan  -->
+    <string name="bpilihanemail">Send an Email</string>
+    <string name="bpilihanrcview">Recycler View</string>
+    <string name="title_activity_pilihan">MENU</string>
+    <string name="tekscoba">Ini adalah contoh paragraf singkat yang digunakan untuk mengetes tampilan atau format baris dalam suatu dokumen. Paragraf ini cukup panjang untuk menunjukkan bagaimana teks akan mengalir dari satu baris ke baris berikutnya, dan memastikan bahwa semua elemen visual, seperti spasi, perataan, dan pemisah baris, berfungsi sebagaimana mestinya.</string>
+    <!--  activity_pilihan selesai  -->
+
+</resources>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="#17171f">
+
+
+    <TextView
+        android:id="@+id/tVCAregis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/rtcacc"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/eTnameregis"
+        android:layout_width="450dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:autofillHints="name"
+        android:background="@drawable/rounded_edittext"
+        android:ems="30"
+        android:fontFamily="@font/poppins_semibold"
+        android:hint="@string/rhname"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="22sp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:textColorHint="#a9a9ba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tVCAregis" />
+
+    <Button
+        android:id="@+id/bSignUpregis"
+        android:layout_width="450dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/rbsignup"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTconfirmpwregis"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tVSignInregis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/afacad_medium"
+        android:text="@string/rthave"
+        android:textColor="#a9a9ba"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bSignUpregis" />
+
+    <EditText
+        android:id="@+id/eTconfirmpwregis"
+        android:layout_width="450dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="35dp"
+        android:autofillHints="password"
+        android:background="@drawable/rounded_edittext"
+        android:ems="30"
+        android:fontFamily="@font/poppins_semibold"
+        android:hint="@string/rhcpass"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="22sp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:textColorHint="#a9a9ba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTpwregis" />
+
+    <EditText
+        android:id="@+id/eTpwregis"
+        android:layout_width="450dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="35dp"
+        android:autofillHints="password"
+        android:background="@drawable/rounded_edittext"
+        android:ems="30"
+        android:fontFamily="@font/poppins_semibold"
+        android:hint="@string/rhpass"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="22sp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:textColorHint="#a9a9ba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTemailregis" />
+
+    <EditText
+        android:id="@+id/eTemailregis"
+        android:layout_width="450dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="35dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/rounded_edittext"
+        android:ems="30"
+        android:fontFamily="@font/poppins_semibold"
+        android:hint="@string/rhemail"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textSize="22sp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:textColorHint="#a9a9ba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTnameregis" />
+
+    <View
+        android:id="@+id/viewregis"
+        android:layout_width="500dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#00FFAA"
+        app:layout_constraintBottom_toBottomOf="@+id/eTconfirmpwregis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.225"
+        tools:ignore="VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/iVBackregis"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/bback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iVmatapwregis"
+        android:layout_width="42dp"
+        android:layout_height="29dp"
+        android:src="@drawable/closeeye"
+        app:layout_constraintBottom_toBottomOf="@+id/eTpwregis"
+        app:layout_constraintEnd_toEndOf="@+id/eTpwregis"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="@+id/eTpwregis"
+        app:layout_constraintTop_toTopOf="@+id/eTpwregis"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iVmatacpwregis"
+        android:layout_width="42dp"
+        android:layout_height="29dp"
+        android:src="@drawable/closeeye"
+        app:layout_constraintBottom_toBottomOf="@+id/eTconfirmpwregis"
+        app:layout_constraintEnd_toEndOf="@+id/eTconfirmpwregis"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="@+id/eTconfirmpwregis"
+        app:layout_constraintTop_toTopOf="@+id/eTconfirmpwregis"
+        tools:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

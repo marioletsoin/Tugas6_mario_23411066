@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#17171f"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/iVlogologin"
+        android:layout_width="217dp"
+        android:layout_height="219dp"
+        android:layout_marginTop="196dp"
+        android:contentDescription="logo"
+        android:src="@drawable/goku"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/eTemaillogin"
+        android:layout_width="450dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="508dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/rounded_edittext"
+        android:ems="30"
+        android:fontFamily="@font/poppins_semibold"
+        android:hint="@string/lhemail"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:textColorHint="#a9a9ba"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tVforgotpwlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/ltfpw"
+        android:textColor="#a9a9ba"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTpwlogin" />
+
+    <TextView
+        android:id="@+id/tVdonthavepwlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/afacad_medium"
+        android:text="@string/ltdont"
+        android:textColor="#a9a9ba"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bSignInlogin" />
+
+    <EditText
+        android:id="@+id/eTpwlogin"
+        android:layout_width="450dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:autofillHints="password"
+        android:background="@drawable/rounded_edittext"
+        android:ems="30"
+        android:fontFamily="@font/poppins_semibold"
+        android:hint="@string/lhpw"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColorHint="#a9a9ba"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTemaillogin" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/ltwelcome"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iVlogologin" />
+
+    <Button
+        android:id="@+id/bSignInlogin"
+        android:layout_width="450dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/lbsignin"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTpwlogin" />
+
+    <ImageView
+        android:id="@+id/iVmatalogin"
+        android:layout_width="42dp"
+        android:layout_height="29dp"
+        android:src="@drawable/closeeye"
+        app:layout_constraintBottom_toBottomOf="@+id/eTpwlogin"
+        app:layout_constraintEnd_toEndOf="@+id/eTpwlogin"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="@+id/eTpwlogin"
+        app:layout_constraintTop_toTopOf="@+id/eTpwlogin"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iVBacklogin"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/bback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
