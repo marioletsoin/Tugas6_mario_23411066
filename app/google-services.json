@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "969138621271",
+    "project_id": "apk-uas",
+    "storage_bucket": "apk-uas.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969138621271:android:7cfbe9a9a8713115f58c12",
+        "android_client_info": {
+          "package_name": "com.example.uts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969138621271-oo4cshl9old9ir6798vh82ocagcjfqqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZISEb2qvqm6W844G4_aJKw5gPBSEkImw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969138621271-oo4cshl9old9ir6798vh82ocagcjfqqq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

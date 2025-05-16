@@ -2,7 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    id("kotlin-parcelize")   // Menggunakan sintaks Kotlin DSL dengan tanda kurung
+    id("kotlin-parcelize")
+    alias(libs.plugins.google.gms.google.services)   // Menggunakan sintaks Kotlin DSL dengan tanda kurung
 }
 
 android {
@@ -59,6 +60,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.cardview)
     implementation(libs.material)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
