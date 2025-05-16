@@ -2,8 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    id("kotlin-parcelize")
-    alias(libs.plugins.google.gms.google.services) // Plugin Google Services
+    id("kotlin-parcelize")   // Menggunakan sintaks Kotlin DSL dengan tanda kurung
 }
 
 android {
@@ -16,6 +15,8 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
+
+        // Kamu bisa menambahkan konfigurasi lain di sini bila diperlukan
     }
 
     buildTypes {
@@ -58,8 +59,6 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.cardview)
     implementation(libs.material)
-    implementation(libs.firebase.auth)
-    implementation(libs.google.play.services.auth) // Dependency untuk Google Sign-In
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
