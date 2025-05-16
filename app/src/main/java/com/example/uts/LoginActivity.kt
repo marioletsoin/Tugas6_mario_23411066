@@ -3,12 +3,15 @@ package com.example.uts
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
+import android.util.Patterns
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.example.uts.databinding.ActivityLoginBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : ComponentActivity() {
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var firebaseAuth: FirebaseAuth
     private var isPasswordVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,45 +19,67 @@ class LoginActivity : ComponentActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Navigasi ke BottomNavActivity setelah login berhasil
-        binding.bSignInlogin.setOnClickListener {
-            val intentHome = Intent(this, BottomNavActivity::class.java)  // Perbaikan: Navigasi ke activity yang mengelola fragmen
-            startActivity(intentHome)
+        firebaseAuth = FirebaseAuth.getInstance()
 
-            Toast.makeText(this, "Login berhasil!", Toast.LENGTH_SHORT).show()
+        // Ketika tombol Sign In diklik, lakukan proses login dengan FirebaseAuth
+        binding.bSignInlogin.setOnClickListener {
+            val email = binding.eTemaillogin.text.toString().trim()
+            val password = binding.eTpwlogin.text.toString().trim()
+
+            if (email.isEmpty()) {
+                binding.eTemaillogin.error = "Masukkan email"
+                binding.eTemaillogin.requestFocus()
+                return@setOnClickListener
+            }
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                binding.eTemaillogin.error = "Email tidak valid"
+                binding.eTemaillogin.requestFocus()
+                return@setOnClickListener
+            }
+            if (password.isEmpty() || password.length < 6) {
+                binding.eTpwlogin.error = "Password minimal 6 karakter"
+                binding.eTpwlogin.requestFocus()
+                return@setOnClickListener
+            }
+
+            firebaseAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Login berhasil!", Toast.LENGTH_SHORT).show()
+                        // Arahkan ke BottomNavActivity (misalnya, aktivitas utama)
+                        startActivity(Intent(this, BottomNavActivity::class.java))
+                        finish()
+                    } else {
+                        Toast.makeText(this, task.exception?.message, Toast.LENGTH_SHORT).show()
+                    }
+                }
         }
 
         // Navigasi ke Forgot Password
         binding.tVforgotpwlogin.setOnClickListener {
-            val intentForgotPw = Intent(this, ForgotpwActivity::class.java)
-            startActivity(intentForgotPw)
+            startActivity(Intent(this, ForgotpwActivity::class.java))
         }
 
-        // Navigasi ke Register
+        // Navigasi ke RegisterActivity jika belum memiliki akun
         binding.tVdonthavepwlogin.setOnClickListener {
-            val intentRegister = Intent(this, RegisterActivity::class.java)
-            startActivity(intentRegister)
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
 
         // Navigasi kembali ke MainActivity
         binding.iVBacklogin.setOnClickListener {
-            val intentMain = Intent(this, MainActivity::class.java)
-            startActivity(intentMain)
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
-        // Toggle Password Visibility
+        // Toggle tampilan password
         binding.iVmatalogin.setOnClickListener {
             isPasswordVisible = !isPasswordVisible
             if (isPasswordVisible) {
-                // Tampilkan password
                 binding.eTpwlogin.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                binding.iVmatalogin.setImageResource(R.drawable.openeye)  // Pastikan file ini ada di res/drawable
+                binding.iVmatalogin.setImageResource(R.drawable.openeye)
             } else {
-                // Sembunyikan password
                 binding.eTpwlogin.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                binding.iVmatalogin.setImageResource(R.drawable.closeeye)  // Pastikan file ini ada di res/drawable
+                binding.iVmatalogin.setImageResource(R.drawable.closeeye)
             }
-            // Pindahkan kursor ke akhir teks setelah perubahan
             binding.eTpwlogin.setSelection(binding.eTpwlogin.text.length)
         }
     }

@@ -7,11 +7,12 @@
     android:background="#17171f"
     tools:context=".LoginActivity">
 
+
     <ImageView
         android:id="@+id/iVlogologin"
         android:layout_width="217dp"
         android:layout_height="219dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="166dp"
         android:contentDescription="logo"
         android:src="@drawable/goku"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +24,7 @@
         android:id="@+id/eTemaillogin"
         android:layout_width="450dp"
         android:layout_height="80dp"
-        android:layout_marginTop="508dp"
+        android:layout_marginTop="478dp"
         android:autofillHints="emailAddress"
         android:background="@drawable/rounded_edittext"
         android:ems="30"
@@ -38,7 +39,8 @@
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds" />
 
     <TextView
         android:id="@+id/tVforgotpwlogin"
@@ -59,7 +61,7 @@
         android:id="@+id/tVdonthavepwlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="68dp"
         android:fontFamily="@font/afacad_medium"
         android:text="@string/ltdont"
         android:textColor="#a9a9ba"
@@ -67,7 +69,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bSignInlogin" />
+        app:layout_constraintTop_toBottomOf="@+id/bSignInlogin"
+        tools:ignore="VisualLintBounds" />
 
     <EditText
         android:id="@+id/eTpwlogin"
@@ -83,12 +86,13 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
         android:textColorHint="#a9a9ba"
         android:textSize="22sp"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eTemaillogin" />
+        app:layout_constraintTop_toBottomOf="@+id/eTemaillogin"
+        tools:ignore="VisualLintBounds" />
 
     <TextView
         android:id="@+id/textView2"
@@ -118,7 +122,8 @@
         android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eTpwlogin" />
+        app:layout_constraintTop_toBottomOf="@+id/eTpwlogin"
+        tools:ignore="VisualLintBounds,VisualLintButtonSize" />
 
     <ImageView
         android:id="@+id/iVmatalogin"
@@ -130,7 +135,7 @@
         app:layout_constraintHorizontal_bias="0.98"
         app:layout_constraintStart_toStartOf="@+id/eTpwlogin"
         app:layout_constraintTop_toTopOf="@+id/eTpwlogin"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription,VisualLintBounds" />
 
     <ImageView
         android:id="@+id/iVBacklogin"
